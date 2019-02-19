@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*it allows us to apply padding adn border to the elements total width and height*/
+  box-sizing: border-box; /*it allows us to apply padding and border to the elements total width and height*/
 } /* removing the default css of the browser */
 
 html {
@@ -20,62 +20,113 @@ html {
 /*---REUSABLE COMPONENT---*/
 /*-----------------------------------------------------*/
 .row {
-  max-width: 1140px; /* to apply center css i.e margin auto you should define the width of an element*/
-  margin: 0 auto;
+  max-width: 1140px !important; /* to apply center css i.e margin auto you should define the width of an element*/
+  margin: 0 auto !important;
 }
-
 
 /*----------------------------------------------------*/
 /*---HEADING---*/
 /*-----------------------------------------------------*/
-h1 {
-  margin: 0;
-  font-size: 250%;
-  color: #fff;
+h1,
+h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 3px;
 }
+h1 {
+  margin: 0;
+  font-size: 250%;
+  color: #fff;
+}
+h2 {
+  font-size: 180%;
+  text-align: center;
+  margin-bottom: 2px;
+}
 
+ h2:after{
+  display: block;
+  background-color: #d35400;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  content: ""; /* to use after we must have to specify content properties*/
+}
+
+h3{
+  font-weight: normal
+}
+
+.section-meal{
+  width:100%
+}
+
+.meal-showcase li{
+  float:left;
+  width:25%;
+  margin:0;
+  display:block;
+  list-style: none;
+}
+
+.meal-photo{
+  width:100%;
+  margin:0
+}
+
+.meal-photo img{
+  height:300px;
+  width:100%
+}
+
+.long-copy{
+ line-height: 80%;
+  margin: 0 auto;
+  width:70%;
+  padding: 10px;
+  margin-left:15%;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  padding:20px
+}
 /*-----BUTTONS----*/
 .btn:link,
 .btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px;
-  color: #fff;
-  border-radius: 200px;
-  transition: background-color 1s
+  display: inline-block !important;
+  text-decoration: none !important;
+  padding: 12px !important;
+  color: #fff !important;
+  border-radius: 200px !important;
+  transition: background-color 1s;
 }
 
-.btn-full{
-  background-color: #e67e22;
+.btn-full {
+  background-color: #e67e22 !important;
 }
 
 .btn-ghost {
-    border: 1px solid #e67e22;
-
+  border: 1px solid #e67e22 !important;
 }
 
-.btn-full:hover{
-    background-color: #d35400;
-    transition:translate(100px,100px)
-  }
+.btn-full:hover {
+  background-color: #d35400 !important;
+  transition: translate(100px, 100px);
+}
 
-  .btn-ghost:hover,
-  .btn-ghost:active {
-    background-color:  #e67e22;
+.btn-ghost:hover,
+.btn-ghost:active {
+  background-color: #e67e22 !important;
 }
 /*----------------------------------------------------*/
 /*---HEADER---*/
 /*-----------------------------------------------------*/
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url("./img/hero.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/hero.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
 .hero-text-box {
   width: 1140px;
   position: absolute; /* it is relative to an parent.*/
@@ -84,43 +135,49 @@ header {
   transform: translate(-50%, -50%);
 }
 
-/*---nav----*/
-.logo{
-    float:left;
-    color:#fff;
-    width:150px;
-    height:150px;
-    margin-top:20px
+.box p{
+  font-size:95%;
+  padding:8px;
+  line-height: 100%
 }
 
-.main-nav{
-    float:right;
-    margin-top:50px
+/*---nav----*/
+.logo {
+  float: left;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
 }
-.main-nav li{
-    list-style: none;
-    text-decoration:none;
-    display: inline-block;
-    margin-left:40px;
-   
+
+.main-nav {
+  float: right;
+  margin-top: 50px;
+}
+.main-nav li {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 40px;
 }
 
 .main-nav li a:link,
-.main-nav li a:visited
-{
-    text-decoration: none;
-    color:#fff;
-    font-size:150%;
-    border-bottom:2px solid transparent;
-    transition: border-bottom 0.2s;
-    padding:8px 0
-    
+.main-nav li a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 150%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  padding: 8px 0;
 }
 
 .main-nav li a:hover,
-.main-nav li a:active{
-    border-bottom: 2px solid #e67e22;
-    
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+.section-feature {
+  padding: 80px 0;
 }
 /* in responsive desing every element position should be relative
 every element in webdesign is an block.For block element only width and height property can be applied
