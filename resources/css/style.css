@@ -16,6 +16,15 @@ html {
   font-weight: 300;
   text-rendering: optimizeLegibility; /* it defines to an rendering engine  to how to render text to the browser.It trade off between the speed legiblity*/
 }
+
+.clearfix{zoom: 1}
+.clearfix{
+  content: '.';
+  clear:'both';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
 /*----------------------------------------------------*/
 /*---REUSABLE COMPONENT---*/
 /*-----------------------------------------------------*/
@@ -199,7 +208,7 @@ header {
 }
 
 .how-it-works{
-  margin-top:40px
+  margin-top:0px
 }
 
 .steps-box li{
@@ -241,8 +250,32 @@ header {
   width:auto /*width auto means it occupy all the horizontal space of block element*/
 }
 
+.cities-location{
+list-style: none;
+}
+
+.city-box img{
+  width:200px;
+  height:auto;
+}
+
+.city-box .cities-location {
+  margin:0 auto;
+  padding:5px;
+}
+
 /* in responsive desing every element position should be relative
 every element in webdesign is an block.For block element only width and height property can be applied
 
 when you declare floats in css you must have to clear it otherwise some css proptertis would not work as expected.
+*/
+
+/* http://webdesignerwall.com/demo/clear-float/ goto this link to understand css float and to solve float issue.row*/
+
+/*
+  to align two element vertically:
+  secrets to align text and icons:{
+    vertical-align:middle;
+    line-height:120%
+    margin-top:-2px:this css property can also be used to align text and iconn
 */
